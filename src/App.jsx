@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import { Sun, Moon, FileText, Save, Trash2, Search, Wand2, Clipboard } from 'lucide-react';
+import Footer from './components/Footer';
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 if (!GEMINI_API_KEY) {
@@ -83,7 +84,7 @@ export default function TextEditor() {
         ))}
         <button
           onClick={removeExtraSpaces}
-          className="w-36 sm:w-34 md:w-38 h-8 sm:h-10 text-sm md:text-[10px] sm:text-[15px] bg-purple-800 text-white rounded-lg hover:bg-purple-700"
+          className="w-36 sm:w-34 md:w-38 h-8 sm:h-10 text-sm  sm:text-[15px] bg-purple-800 text-white rounded-lg hover:bg-purple-700"
         >
           Remove Extra Spaces
         </button>
@@ -148,6 +149,12 @@ export default function TextEditor() {
         >
           <Save size={16} className="mr-1" /> Save
         </button>
+
+        
+        
+      </div>
+      <div  className="w-[100%] flex justify-center mt-4">
+          <Footer />
       </div>
     </motion.div>
   );
