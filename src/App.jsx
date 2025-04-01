@@ -126,10 +126,10 @@ export default function TextEditor() {
       <div className="flex justify-start mt-4 gap-2 sm:gap-4">
         <button
           onClick={handleAIWrite}
-          className="w-32 sm:w-32 md:w-36 h-8 sm:h-10 text-sm sm:text-[15px] bg-blue-800 text-white rounded-lg hover:bg-blue-700 flex items-center justify-center"
+          className="w-32 sm:w-32 md:w-36 h-8 sm:h-10 text-sm sm:text-[15px] bg-purple-800 text-white rounded-lg hover:bg-purple-700 flex items-center justify-center"
           disabled={loading}
         >
-          {loading ? 'Writing with AI...' : <><Wand2 size={20} className="mr-2" /> Write with AI</>}
+          {loading ? 'Writing with AI...' : <><Wand2 size={20} className="mr-2" /> AI write</>}
         </button>
         <button
           onClick={copyToClipboard}
@@ -145,7 +145,7 @@ export default function TextEditor() {
         </button>
         <button
           onClick={handleSave}
-          className="w-24 sm:w-32 md:w-36 h-8 sm:h-10 text-sm sm:text-base bg-blue-800 text-white rounded-lg hover:bg-blue-700 flex items-center justify-center"
+          className="w-24 sm:w-32 md:w-36 h-8 sm:h-10 text-sm sm:text-base bg-purple-800 text-white rounded-lg hover:bg-purple-700 flex items-center justify-center"
         >
           <Save size={16} className="mr-1" /> Save
         </button>
